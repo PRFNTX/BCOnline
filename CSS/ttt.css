@@ -1,0 +1,30 @@
+#main{
+	margin:auto auto;
+}
+
+div {
+	margin:0px;
+	padding:0px;
+	border:0px;
+	height:80px;
+	width:249px;
+}
+
+h1{
+	text-align:center;
+}
+
+span {
+	height:80px;
+	width:79px;
+	margin:0px;
+	display:inline-block;
+}
+
+span:not(:first-child){
+	border-left:3px black solid;
+}
+
+div:not(:first-of-type){
+	border-top:3px solid black;
+}

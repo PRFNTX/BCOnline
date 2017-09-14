@@ -1,0 +1,19 @@
+p {
+	font-family: Georgia;
+	font-size:22px;
+	font-weight:bold;
+	font-weight; 340; /*100-800 some fonts only*/
+	line-height: 1.25; /*line spacing*/
+	text-align:center;
+	text-decoration:underline;
+	width:200px;
+	height:10%;/* of parent*/
+	margin: 10px auto 20px auto;
+}
+h1 {
+	text-align:right;
+	
+}
+span {
+	font-size:2.0em;
+}

@@ -1,0 +1,65 @@
+h1 {
+	color:#000000;
+	font-size:56px;
+	border-width:5px;
+	border-color:purple;
+	border-style:solid;
+}
+
+h4 {
+	border-color:#4B0082;
+	background: rgba(140,220,50,50);
+}
+
+li {
+	color:#FF1493;
+}
+/* element*/
+body {
+
+}
+/* ID */
+#special{
+	background-color:yellow;
+
+}
+
+/* class */
+.completed{
+
+	text-decoration:blue line-through;
+	
+}
+
+/*star (selects all)*/
+* {
+	
+}
+/*Descendant (every achor inside an li)*/
+li a {
+
+}
+/*Adjacent Selector (siblings after, same level)*/
+h4 + ul {
+
+}
+/*Attribute selector  (all things with attribute (href, etc)*/
+a[href="http://www.google.com"]{
+}
+input[type="t"]{
+
+}
+
+/* nth of type (selects nth of type from each group */
+ul:nth-of-type(3){
+
+}
+
+ul:nth-of-type(even){
+
+}
+/*more*/
+a.hover{
+}
+input.checked{
+}
