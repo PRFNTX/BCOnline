@@ -1,4 +1,4 @@
-var dif;
+var dif=true;
 var color;
 var answer;
 var squares = document.querySelectorAll(".square");
@@ -19,34 +19,36 @@ for (k=0;k<6;k++){
 function Guess(){
     if (this===squares[answer]){
         //document.querySelectorAll(".color-match").style.color=color;
-        clue.style.innerText="CORRECT!";
+        clue.innerText="CORRECT!";
         for (i=0;i<6;i++){
             if (i!==answer){
-                squares[i].style.visible=false;
+                squares[i].style.visible="visible";
             }
         }
     }
     else {
-        this.visibility=false;
+        this.style.visibility="hidden";
     }
 }
 
 function toHard(){
     dif=true;
     for (i=3;i<6;i++){
-        squares[i].style.visibility=true;
+        squares[i].style.visibility="visible";
     }
     easy.classList.toggle("selected");
     hard.classList.toggle("selected");
+    reset();
 }
 
 function toEasy(){
     dif=false;
     for (i=3;i<6;i++){
-        squares[i].style.visibility=false;
+        squares[i].style.visible=false;
     }
     easy.classList.toggle("selected");
     hard.classList.toggle("selected");
+    reset();
 }
 
 function reset(){
@@ -63,23 +65,23 @@ function reset(){
     for (i=0;i<6;i++){
         newCols.push(ranCol());
         sqCols[i]=newCols[i];
-        squares[i].style.background_color=sqCols[i];
+        squares[i].style.backgroundColor=newCols[i];
     }
     color=newCols[answer];
     for (j=0;j<6;j++){
         if (j<num){
-            squares[j].style.visible=true;
+            squares[j].style.visibility="visible";
         }
         else {
-            squares[j].style.visible=false;
+            squares[j].style.visibility="hidden";
         }
     }
-    clue.style.innerText=color;
+    clue.innerText=color;
 }
 
 function ranCol(){
     var col = "rgb(";
     var vals =[0,0,0];
     vals.forEach(function(val,index){vals[index]=Math.trunc(Math.random()*255)});
-    return col+vals[0]+", " +vals[1]+", "+vals[2] +")";
+    return col+vals[0]+", "+vals[1]+", "+vals[2]+")";
 }
